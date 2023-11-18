@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VirusTotal Result</title>
+</head>
+<body>
+    <h1>Result for IP Address: {{ ip_address }}</h1>
+    {% if result %}
+        <p>Details:</p>
+        <pre>{{ result | safe }}</pre>
+    {% else %}
+        <p>Unable to fetch information for the specified IP address.</p>
+    {% endif %}
+</body>
+</html>
